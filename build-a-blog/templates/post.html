@@ -1,24 +1,13 @@
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-  </head>
-  <body>
-
-    <h1>CS253 Blog</h1>
-
-    <div class="post">
-      <div class="title">{{ post.subject }}</div>
-      <div class="date">{{ post.created.strftime("%b %d, %Y") }}</div>
-      <hr/>
-
-      <div class="content">{{ post.content }}</div>
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.subject}}
     </div>
 
-    <div id="queried">
-      queried {{ queried }} seconds ago.
+    <div class="post-date">
+      {{p.created.strftime("%b %d, %Y")}}
     </div>
-  </body>
+  </div>
 
-
-</html>
+  <div class="post-content">
+    {{p._render_text | safe}}

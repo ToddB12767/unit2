@@ -1,12 +1,57 @@
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Todd Bradley LC101</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todd Bradley blog Spot">
+    <meta name="author" content="Todd Bradley">
 
-{% block content %}
-{% endblock %}
+    <!-- Le styles -->
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="/css/styles.css" />
 
-</body>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap-responsive.css" />
+
+  </head>
+
+  <body>
+    <!-- Nav bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+    <h1>Todd's Blog Spot</h1>
+    <ul class="nav">
+      <li><a href="/blog">Blogs</a></li>
+      <li><a href="/newpost">Post New Blog</a></li>
+    </ul>
+      </div>
+    </div>
+
+    <div class="container">
+
+    {% block content %}
+    <p> You'll see this if my template doesn't render correctly. </p>
+    {% endblock content %}
+
+    <div class="clearfix"></div>
+    </div> <!-- /container -->
+
+    <hr>
+    <footer>
+      <p class="offset1">LaunchCode 101 Project 2017</p>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="/js/scripts.js"></script>
+
+  </body>
 </html>
