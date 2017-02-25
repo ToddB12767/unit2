@@ -52,8 +52,6 @@ class BlogHandler(webapp2.RequestHandler):
     def initialize(self, *a, **kw):
         """
             A filter to restrict access to certain pages when not logged in.
-            If the request path is in the global auth_paths list, then the user
-            must be signed in to access the path/resource.
         """
         webapp2.RequestHandler.initialize(self, *a, **kw)
         uid = self.read_secure_cookie('user_id')
@@ -204,10 +202,6 @@ class SignupHandler(BlogHandler):
         """
             Validate submitted data, creating a new user if all fields are valid.
             If data doesn't validate, render the form again with an error.
-
-            This code is essentially identical to the solution to the Signup portion
-            of the Formation assignment. The main modification is that we are now
-            able to create a new user object and store it when we have valid data.
         """
 
         submitted_username = self.request.get("username")
